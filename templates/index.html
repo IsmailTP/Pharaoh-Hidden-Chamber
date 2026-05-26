@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple of Khafra</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="index-body">
+    <div class="container welcome-box">
+        <h1>Temple of Khafra</h1>
+        <div class="story-arc">
+            <p class="story-text">For centuries, the Temple of Khafra has remained sealed beneath the desert sands.</p>
+            <p class="story-text">Legends speak of a hidden chamber where the Pharaoh stored his ultimate secret — the Golden Ankh.</p>
+            <p class="story-text highlight">Only those who understand the language of the ancients may pass beyond the temple gates.</p>
+        </div>
+        <a href="/login" class="btn">Enter the Temple</a>
+    </div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

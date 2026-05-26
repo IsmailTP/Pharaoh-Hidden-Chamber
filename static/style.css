@@ -1,0 +1,187 @@
+:root {
+    --bg-dark: #12100e;
+    --gold: #d4af37;
+    --gold-glow: rgba(212, 175, 55, 0.5);
+    --sand: #c2b280;
+    --sand-dark: #8c7b50;
+    --red-danger: #8b0000;
+    --text-light: #e0d8c0;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.index-body {
+    background: radial-gradient(circle at center, var(--sand-dark) 0%, var(--bg-dark) 80%);
+}
+
+.temple-body {
+    background: linear-gradient(180deg, #1f1b14 0%, var(--bg-dark) 100%);
+    border-left: 5px solid var(--gold);
+    border-right: 5px solid var(--gold);
+    box-sizing: border-box;
+}
+
+.chamber-body {
+    background: radial-gradient(circle at center, #2e2613 0%, #000 85%);
+}
+
+.container {
+    padding: 3rem;
+    border: 2px solid var(--sand-dark);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+    max-width: 600px;
+    position: relative;
+    z-index: 10;
+}
+
+.welcome-box {
+    border-color: var(--sand);
+}
+
+.temple-box {
+    border-color: var(--gold);
+    box-shadow: 0 0 20px var(--gold-glow);
+}
+
+.chamber-box {
+    border: 3px solid var(--gold);
+    box-shadow: 0 0 50px var(--gold-glow);
+}
+
+h1 {
+    color: var(--gold);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px var(--gold-glow);
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.gold-text {
+    color: var(--gold);
+    text-shadow: 0 0 20px var(--gold-glow), 0 0 40px var(--gold-glow);
+    font-size: 3rem;
+}
+
+.story-text, .murmur, .dramatic-text, .story-arc p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--sand);
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 15px 30px;
+    background-color: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn:hover {
+    background-color: var(--gold);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px var(--gold-glow);
+}
+
+.gold-btn {
+    background-color: var(--gold);
+    color: var(--bg-dark);
+}
+
+.gold-btn:hover {
+    background-color: transparent;
+    color: var(--gold);
+}
+
+.identity-panel {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 1px dotted var(--sand);
+    background-color: rgba(255, 215, 0, 0.05);
+}
+
+.role-highlight {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hint-text {
+    opacity: 0.8;
+    color: var(--sand);
+    margin: 2rem 0;
+    font-style: italic;
+}
+
+.error-text {
+    color: var(--red-danger);
+    text-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+}
+
+.warning-text {
+    color: orange;
+}
+
+.flag-box {
+    margin: 3rem 0;
+    padding: 1rem;
+    background: rgba(212, 175, 55, 0.1);
+    border: 2px dashed var(--gold);
+}
+
+.flag-box h2 {
+    font-family: monospace;
+    font-size: 2rem;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 0 10px var(--gold);
+}
+
+.final-line {
+    font-style: italic;
+    color: var(--sand);
+    margin-top: 2rem;
+    opacity: 0.8;
+}
+
+.footer-hint {
+    position: absolute;
+    bottom: 20px;
+    color: rgba(224, 216, 192, 0.1); /* Very faint */
+    font-size: 0.9rem;
+}
+
+.footer-hint p {
+    margin: 0;
+}

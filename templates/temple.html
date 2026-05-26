@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside the Temple</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="temple-body">
+    <div class="container temple-box">
+        {% if fake_warning %}
+            <h2 class="error-text">Forbidden by ancient magic</h2>
+            <p>Admin is not a glyph known to these walls.</p>
+            <a href="/login" class="btn">Return</a>
+        {% elif dangerous_path %}
+            <h2 class="warning-text">You walk a dangerous path, explorer...</h2>
+            <p>Not all identities belong to you.</p>
+            <a href="/login" class="btn">Return</a>
+        {% else %}
+            <h1>Welcome, {{ identity.name }}</h1>
+            <p class="murmur">You step into the عظيمة temple. Walls whisper with ancient glyphs.</p>
+            <p class="murmur">A stone tablet glows faintly… it seems to represent your identity.</p>
+            
+            <div class="identity-panel">
+                <p>Role: <span class="role-highlight">{{ identity.role|upper }}</span></p>
+                <p>Status: The temple protects sacred identities.</p>
+            </div>
+            
+            <p class="hint-text italic">"Every soul is bound to a glyph. Change the glyph… change the soul."</p>
+
+            {% if is_pharaoh %}
+                <div class="pharaoh-reveal">
+                    <p class="dramatic-text">The air grows heavy… the temple trembles.</p>
+                    <p class="dramatic-text">You have assumed an identity that was never meant for mortals.</p>
+                    <br>
+                    <a href="/chamber?glyph={{ glyph }}" class="btn gold-btn">Enter the Hidden Chamber</a>
+                </div>
+            {% else %}
+                <p class="normal-user-text">You are but a visitor…</p>
+            {% endif %}
+
+        {% endif %}
+    </div>
+
+    <footer class="footer-hint">
+        <p>The priests did not write numbers… they transformed them.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
